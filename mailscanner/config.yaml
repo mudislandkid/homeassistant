@@ -1,0 +1,7 @@
+{
+    "name": "Mail Scanner",
+    "version": "0.1.0",
+    "description": "Scans incoming mail and sorts it into appropriate folders",
+    "dependencies": ["pytesseract", "Pillow", "PyMuPDF"]
+  }
+  

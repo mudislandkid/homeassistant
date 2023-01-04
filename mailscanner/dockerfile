@@ -1,0 +1,12 @@
+FROM python:3.8
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+  && rm -rf /var/lib/apt/lists/*
+
+COPY . /usr/src/app
+
+RUN pip3 install --upgrade pip \
+  && pip3 install -r /usr/src/app/requirements.txt
+
+CMD ["python", "/usr/src/app/run.py"]
